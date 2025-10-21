@@ -1,8 +1,29 @@
 <script>
-    export default { 
-        // Add Code Here to complete the task
-        // Note: DO NOT USE "eval()". In security, "eval" is considered "evil"!!!
+export default {
+  name: "Ex1",
+  data() {
+    return {
+      x: 0,
+      y: 0,
+      operators: ["+", "-", "*", "/", "%"],
+      selectedOp: ""
+    };
+  },
+  computed: {
+    result() {
+      const x = Number(this.x);
+      const y = Number(this.y);
+
+      switch (this.selectedOp) {
+        case "+": return x + y;
+        case "-": return x - y;
+        case "*": return x * y;
+        case "/": return x / y;
+        case "%": return x % y;
+      }
     }
+  }
+};
 </script>
 
 <template>
